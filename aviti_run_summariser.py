@@ -12,7 +12,7 @@ Outputs:
     - run_summary.tsv        : one row per run (RunStats.json + Metrics.csv + UnassignedSequences.csv)
     - sample_summary.tsv     : one row per sample (SampleName_stats.json)
 
-Author: Dan Parsons @NHMUK / with Claude
+Author: Dan Parsons @NHMUK / with Claude (Opus 4.6)
 """
 
 import argparse
