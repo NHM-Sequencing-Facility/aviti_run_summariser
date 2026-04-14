@@ -5,7 +5,7 @@ Given a parent directory containing one or more analysed run folders, the script
 
 This repository contains the python script `aviti_run_summariser.py`, explanations of parsed data and their source files, and guidance on running the script. 
 
-> The long-term goal of this script is to automatically execute on a weekly(?) basis, appending any new AVITI runs (since the last time the script was executed) to the output summary TSV files.
+> The long-term goal of this script is to automatically execute on a weekly basis, appending any new AVITI runs (since the last time the script was executed) to the output summary TSV files.
 
 ---
 
@@ -96,3 +96,6 @@ The input directory should contain one or more AVITI run subdirectories, each pr
 | `SampleStats_QualityScoreMean` | `{SampleName}_stats.json` | Mean Q score for this sample. Samples with substantially lower values than the run average may indicate library-specific issues (e.g. degraded input, poor library complexity). |
 | `SampleStats_PercentMismatch` | `{SampleName}_stats.json` | Percentage of polonies assigned to this sample with an index mismatch. A sample with a notably higher mismatch rate than others in the same run may have index synthesis issues or be receiving misassigned reads from a similar index. |
 | `SampleStats_PercentReadsTrimmed` | `{SampleName}_stats.json` | Percentage of reads trimmed for this sample. Comparing across samples within a run highlights which libraries had shorter inserts or more adapter read-through. |
+
+## Authorship
+This script was written by Dan Parsons @NHMUK.
