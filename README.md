@@ -18,9 +18,10 @@ If run manually:
 ```bash
 python aviti_run_summariser.py -i /path/to/ANALYSED_RUNS -o /path/to/output_dir [--full]
 
--i: The input directory should contain one or more AVITI run subdirectories, each produced by Bases2Fastq. A valid run directory is identified by the presence of `RunStats.json` at its root.
--o: The path
---full: 
+
+-i: The input directory should contain one or more AVITI run subdirectories, each produced by Bases2Fastq. A valid run directory is identified by the presence of `RunStats.json` at its root and a completion flag in 'info/Bases2Fastq.log'
+-o: The directory path where all outputs will be saved. Any directory that does not exist at runtime will be automatically created by the script.
+--full: (optionally) Reprocess all runs and overwrite existing TSV files. Without this flag, only new (unprocessed) runs are appended to the existing outputs. Whether a run is new (unprocessed) or old (processed) is determined by the presence of the run directory name in a .processed_runs file within the output directory.
 ```
 
 **The script will skip any subdirectories missing this file.**
