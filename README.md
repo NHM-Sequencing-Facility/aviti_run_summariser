@@ -5,7 +5,7 @@ Given a parent directory containing one or more analysed run folders, the script
 
 This repository contains the python script `aviti_run_summariser.py`, explanations of parsed data and their source files, and guidance on running the script. 
 
-> The AVITI run summariser is set up (via a crontab job) to run every 24 hours at midnight. Using `.processed_runs`, the script will only run on (bases2fastq)-processed AVITI run directories that have been generated since execution of the script had run. It will append new rows to the run_summary and sample_summary TSV files for each new AVITI run directory and samples within said directory, respectively
+> The AVITI run summariser is set up (via a crontab job) to run every 24 hours at midnight. Using `.processed_runs`, the script will only run on (bases2fastq)-processed AVITI run directories that have been generated since execution of the script had run. It will append new rows to the run_summary and sample_summary TSV files for each new AVITI run directory and samples within said directory, respectively.
 
 ---
 
@@ -17,9 +17,13 @@ This repository contains the python script `aviti_run_summariser.py`, explanatio
 If run manually:
 ```bash
 python aviti_run_summariser.py -i /path/to/ANALYSED_RUNS -o /path/to/output_dir [--full]
+
+-i: The input directory should contain one or more AVITI run subdirectories, each produced by Bases2Fastq. A valid run directory is identified by the presence of `RunStats.json` at its root.
+-o: The path
+--full: 
 ```
- 
-The input directory should contain one or more AVITI run subdirectories, each produced by Bases2Fastq. A valid run directory is identified by the presence of `RunStats.json` at its root. **The script will skip any subdirectories missing this file.**
+
+**The script will skip any subdirectories missing this file.**
  
 ## Outputs
 | File | Description |
