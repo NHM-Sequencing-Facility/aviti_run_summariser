@@ -35,6 +35,7 @@ python aviti_run_summariser.py -i /path/to/ANALYSED_RUNS -o /path/to/output_dir 
 ---
 
 ## Column Reference
+Element Bioscience definitions of the statistics reported in both files (below) are also outlined on their [website](https://docs.elembio.io/docs/elembio-cloud/run-output/).
 ### `run_summary.tsv`
 
 | Column | Source | Description |
