@@ -5,7 +5,7 @@ Given a parent directory containing one or more analysed run folders, the script
 
 This repository contains the python script `aviti_run_summariser.py`, explanations of parsed data and their source files, and guidance on running the script. 
 
-> The AVITI run summariser is set up (via a crontab job) to run every 24 hours at midnight. Using `.processed_runs`, the script will only run on (bases2fastq)-processed AVITI run directories that have been generated since it's last execution. It will append new rows to the run_summary and sample_summary TSV files for each new AVITI run directory and samples within said directory, respectively.
+> The AVITI run summariser is set up (via a crontab job) to run every 24 hours at midnight. Using `.processed_runs`, the script will only run on (bases2fastq)-processed AVITI run directories that have been generated since its last execution. It will append new rows to the run_summary and sample_summary TSV files for each new AVITI run directory and samples within said directory, respectively.
 
 ---
 
