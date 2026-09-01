@@ -1,11 +1,11 @@
 # AVITI run summariser
-`aviti_run_summariser.py` aggregates quality and performance metrics from demultiplexed [Element AVITI](https://www.elementbiosciences.com/products/aviti) sequencing runs processed by [Bases2Fastq](https://docs.elembio.io/docs/bases2fastq/). 
+`aviti_run_summariser.py` aggregates quality and performance metrics from demultiplexed [Element AVITI](https://www.elementbiosciences.com/products/aviti) sequencing runs processed by [Bases2Fastq](https://docs.elembio.io/docs/tutorials/running-bases2fastq/). 
 
 Given a parent directory containing one or more analysed run folders, the script parses `RunStats.json`, `RunParameters.json`, `Metrics.csv`, `UnassignedSequences.csv`, and per-sample `*_stats.json` files, then compiles two summary TSVs: a run-level summary spreadsheet and a sample-level summary spreadsheet. This provides a single point of reference for tracking run quality, yield, and assignment rates across multiple sequencing runs without needing to open individual QC reports or manually copy metrics.
 
 This repository contains the python script `aviti_run_summariser.py`, explanations of parsed data and their source files, and guidance on running the script. 
 
-> The AVITI run summariser is set up (via a crontab job) to run every 24 hours at midnight. Using `.processed_runs`, the script will only run on (bases2fastq)-processed AVITI run directories that have been generated since execution of the script had run. It will append new rows to the run_summary and sample_summary TSV files for each new AVITI run directory and samples within said directory, respectively.
+> The AVITI run summariser is set up (via a crontab job) to run every 24 hours at midnight. Using `.processed_runs`, the script will only run on (bases2fastq)-processed AVITI run directories that have been generated since it's last execution. It will append new rows to the run_summary and sample_summary TSV files for each new AVITI run directory and samples within said directory, respectively.
 
 ---
 
